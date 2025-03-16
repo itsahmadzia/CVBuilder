@@ -3,6 +3,8 @@ package com.example.cvbuilder;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ import java.util.Objects;
 public class ViewActivity extends AppCompatActivity {
 
     private ImageView imgProfile;
+    Button btnShare ;
     private TextView txtPersonalDetails, txtSummary, txtEducation, txtExperience, txtCertifications, txtReferences;
 
     @Override
@@ -22,6 +25,7 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
 
+        btnShare = findViewById(R.id.btnShare);
         imgProfile = findViewById(R.id.imgProfile);
         txtPersonalDetails = findViewById(R.id.txtPersonalDetails);
         txtSummary = findViewById(R.id.txtSummary);
@@ -29,6 +33,29 @@ public class ViewActivity extends AppCompatActivity {
         txtExperience = findViewById(R.id.txtExperience);
         txtCertifications = findViewById(R.id.txtCertifications);
         txtReferences = findViewById(R.id.txtReferences);
+
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder cvText = new StringBuilder();
+                cvText.append("Personal Details:\n").append(txtPersonalDetails.getText().toString()).append("\n\n");
+                cvText.append("Summary:\n").append(txtSummary.getText().toString()).append("\n\n");
+                cvText.append("Education:\n").append(txtEducation.getText().toString()).append("\n\n");
+                cvText.append("Experience:\n").append(txtExperience.getText().toString()).append("\n\n");
+                cvText.append("Certifications:\n").append(txtCertifications.getText().toString()).append("\n\n");
+                cvText.append("References:\n").append(txtReferences.getText().toString()).append("\n");
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, cvText.toString());
+
+                try {
+                    startActivity(intent);
+                } catch (android.content.ActivityNotFoundException ex) {
+
+                }
+            }
+        });
 
         Intent intent = getIntent();
         if (intent != null) {
