@@ -33,9 +33,7 @@
         <activity
             android:name=".Summary"
             android:exported="false" />
-        <activity
-            android:name=".DataEntryActivity"
-            android:exported="false" />
+
         <activity
             android:name=".splash"
             android:exported="true">
