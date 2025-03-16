@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/etInstitute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Institute Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etPassingDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Passing Date"
+        android:focusable="false"
+        android:clickable="true" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:inputType="text" />
+</LinearLayout>

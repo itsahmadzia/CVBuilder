@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp">
+
+    <EditText
+        android:id="@+id/etCertificationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Certification Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etIssuingOrganization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Issuing Organization"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etIssueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Issue Date"
+        android:focusable="false"
+      />
+
+    <EditText
+        android:id="@+id/etExpirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expiration Date (Optional)"
+        android:focusable="false"
+         />
+
+
+</LinearLayout>
