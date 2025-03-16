@@ -75,7 +75,7 @@
         android:id="@+id/btnViewProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/references"
+        android:text="View Profile"
         android:backgroundTint="#FFFFFF"
         android:textColor="@android:color/black"
         android:layout_marginBottom="20dp"/>

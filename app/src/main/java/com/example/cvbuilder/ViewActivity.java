@@ -46,7 +46,7 @@ public class ViewActivity extends AppCompatActivity {
                     if(Objects.equals(personalDetails.get(key), "")){
                         continue;
                     }
-                    details.append(key.toUpperCase().replace("_"," ")).append(": ").append(personalDetails.get(key)).append("\n");
+                    details.append(personalDetails.get(key)).append("\n");
                 }
                 txtPersonalDetails.setText(details.toString());
             }
